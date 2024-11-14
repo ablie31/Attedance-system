@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="adminDsbord.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Admin Dashboard</h1>
+        <div class="admin-section">
+            <h2>Manage Employees</h2>
+            <div class="employee-actions">
+                <!-- Add Employee Form -->
+                <form id="add-employee-form">
+                    <h3>Add New Employee</h3>
+                    <label for="employee-id">Employee ID:</label>
+                    <input type="text" id="employee-id" required>
+                    <label for="employee-name">Name:</label>
+                    <input type="text" id="employee-name" required>
+                    <label for="position">Position</label>
+                    <input type="text" id="position" required>
+                    <label for="department">Department</label>
+                    <input type="text" id="department" required>
+                    <button type="submit">Add Employee</button>
+                </form>
+
+                <!-- Update Employee Form -->
+                <form id="update-employee-form">
+                    <h3>Update Employee</h3>
+                    <label for="update-employee-id">Employee ID:</label>
+                    <input type="text" id="update-employee-id" required>
+                    <label for="new-employee-name">New Name:</label>
+                    <input type="text" id="new-employee-name">
+                    <label for="new-position">Position</label>
+                    <input type="text" id="new-position">
+                    <label for="new-department">Department</label>
+                    <input type="text" id="new-department">
+                    <button type="submit">Update Employee</button>
+                </form>
+
+                <!-- Delete Employee Form -->
+                <form id="delete-employee-form">
+                    <h3>Delete Employee</h3>
+                    <label for="delete-employee-id">Employee ID:</label>
+                    <input type="text" id="delete-employee-id" required>
+                    <button type="submit">Delete Employee</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Attendance Management Section -->
+        <div class="admin-section">
+            <h2>Manage Attendance</h2>
+            <button onclick="fetchAttendance()">View Attendance Logs</button>
+            <button onclick="exportAttendance()">Export to Excel</button>
+            <div id="attendance-logs"></div>
+            <button><a href="index.html">Back to Home Page</a></button>
+        </div>
+    </div>
+
+    <script src="adminDsbord.js"></script>
+</body>
+</html>

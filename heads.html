@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="heads-style.css">
+    <title>Heads of School Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Heads of school Dashboard</h1>
+        </div>
+        <p>Welcome. You can view team attendance and generate reports.</p>
+        <div id="heads-features">
+            <p>View team attendance, generate reports.</p>
+        </div>
+            
+
+        <div id="login-section">
+            <form id="headsLoginForm" method="POST" action="heads">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required/>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required/>
+
+                <button type="submit" id="login-button">Login</button>
+            </form>
+        </div>
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('headsLoginForm');
+
+            loginForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+
+                const username = document.getElementById('username').value.trim();
+                const password = document.getElementById('password').value;
+
+                // Run validation checks
+                if(!validateUsername(username) || !validatePassword(password)) {
+                    return; // Stop form submission if validation fails
+                }
+
+                // if validation passes, submit the form
+                this.submit();
+
+            });
+
+            // validation functions
+            function validationUsername(username) {
+                const usernamePattern = /^[a-zA-Z0-9]+$/;
+                if ( username === "") {
+                    alert('Please fill in the username.');
+                    return false;
+                } else if (!usernamePattern.test(username)) {
+                    alert("Username can only contain letters and numbers.");
+                    return false;
+                }
+                return true;
+            }
+
+            function validatoinPassword(password) {
+                const passwordPattern = /^[a-zA-Z0-9]+$/;
+                if (password.length < 8) {
+                    alert("Password must at least 8 characters long.");
+                    return false;
+                } else if (!usernamePattern.test(password)) {
+                    alert("Password can only contain letters and numbers.");
+                    return false;
+                }
+                return true;
+            }
+        });
+    </script>
+</body>
+</html>

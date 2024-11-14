@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user-style.css">
+    <title>User Dashboard</title>
+</head>
+<body>
+    <div class="container">
+            <div class="header">
+                <h1>Staff and Students Dashboard</h1>
+            </div>
+            
+            <p>Welcome. You can view your attendance data.</p>
+
+            <div id="attendance-records">
+                <h2>Your Attendance Records</h2>
+                <p id="record-status">No records available yet.</p>
+            </div>
+
+            <div id="login-section">
+                <form id="userLoginForm" method="POST" action="user">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required/>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required/>
+
+                    <button type="submit" id="login-button">Login</button>
+                </form>
+            </div>
+            <a href="index.html">Back to Home</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.querySelector('#login-section form');
+            const attendanceRecords = document.getElementById('attendance-records');
+            const recordStatus = document.get.getElementById('record-stuts');
+
+            // Handle form submission
+            loginForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+
+                if(username === 'user123' && password === 'password123') {
+                    alert('Login successful');
+                    showAttendanceRecords(); // Show the attendance records after Login
+                } else {
+                    alert('Invalid username or password');
+                }
+            });
+
+            // Function to show attendance records
+            function showAttendanceRecords() {
+
+                // Update the record status message
+                recordStatus.textContent = "Record available, View the attendance";
+                
+                attendanceRecords.innerHTML = `
+                <h2>Your Attendance Records</h2>
+                <ul>
+                    <li>2024-11-03: Present</li>
+                    <li>2024-11-04: Present</li>
+                    <li>2024-11-05: Present</li>
+                </ul>
+
+            `;
+
+            // Hide Login section after successful Login
+            document.getElementById('login-section').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

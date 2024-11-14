@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsQr/1.4.0/jsQR.js"></script>
+    <title>School Attendance System</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>School Attendance Tracking System</h1>
+        </div>
+
+        <p>Welcome! Please select your role to access the system:</p>
+        <div class="link-container">
+            <ul>
+                <li><a href="admin_dashbord.html">School Admin Dashboard</a></li>
+                <li><a href="heads.html">Heads of school Dashboard</a></li>
+                <li><a href="user.html">Staff and Students Dashboard</a></li>
+            </ul>
+        </div>
+        <h2>QR Code Scanner</h2>
+        <div id="qr-scanner" class="video-container">
+            <video id="video" width="320" height="240"></video>
+            <button id="start-button">Start Scanning</button>
+            <button id="stop-button" class="hidden">Stop Scanning</button>
+        </div>
+        <p id="status">Scan a QR code</p>
+
+        <div id="result" class="hidden">
+            <h2>Attendance Status</h2>
+            <p id="attendance-data"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

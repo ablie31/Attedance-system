@@ -1,0 +1,102 @@
+body {
+    background-image: url('bac2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 30vh;
+}
+
+
+.container {
+    max-width: 500px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px 30px;
+    background-color: rgba(244, 244, 249, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    background-color: rgb(9, 9, 255);
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #fff;
+}
+
+p {
+    color: #555;
+}
+
+#heads-features p {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #e6f7ff;
+    border-radius: 8xp;
+    font-size: 1em;
+    color: #0d47a1;
+    font-weight: bold;
+}
+
+#login-section {
+    margin-top: 20px;
+}
+
+#login-section label {
+    display: block;
+    font-size: 1em;
+    color: #333;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+#login-section input[type="text"],
+#login-section input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 1px;
+
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#login-section button {
+    padding: 10px 20px;
+    background-color: #4edd89;
+    border: 1px solid #555;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login-section button:hover {
+    background-color: #45a049;
+}
+
+a {
+    display: inline-block;
+    margin: 6px 5px;
+    color: #0d29a3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #09327a;
+}
